@@ -66,6 +66,7 @@ const App = () => {
       <div ref={aboutRef}>
         <AboutUs />
       </div>
+      
     </div>
   );
 };

@@ -4,34 +4,21 @@ import { ChevronRight, DollarSign, PieChart, Bell, Target, ArrowRight } from "lu
 import { motion } from "framer-motion";
 
 export default function LandingPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [addDetails, setAddDetails] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openLoginModal = () => setIsLoginModalOpen(true);
+  const closeLoginModal = () => setIsLoginModalOpen(false);
+
+  const openRegisterModal = () => setIsRegisterModalOpen(true);
+  const closeRegisterModal = () => setIsRegisterModalOpen(false);
+  
+  const openDetails = () => setAddDetails(true);
+  const closeDetails = () => setAddDetails(false);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 pt-20">
-      {/* Header */}
-      {/* <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
-        <a href="#" className="flex items-center justify-center">
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <DollarSign className="h-8 w-8 text-blue-400" />
-          </motion.div>
-          <span className="ml-2 text-xl font-bold text-blue-300">BudgetBuddy</span>
-        </a>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            Features
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            About
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            Contact
-          </a>
-        </nav>
-      </header> */}
-
       {/* Main content */}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
@@ -51,11 +38,14 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={openModal}>
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={openLoginModal}>
                   Login
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-400 hover:bg-blue-950">
+                <Button size="lg" variant="outline" className="border-blue-600 text-blue-400 hover:bg-blue-950" onClick={openRegisterModal}>
                   Register
+                </Button>
+                <Button size="lg" variant="outline" className="bg-black text-white-400 hover:bg-blue-950" onClick={openDetails}>
+                  Add Financial Details
                 </Button>
               </div>
             </motion.div>
@@ -91,11 +81,8 @@ export default function LandingPage() {
         </section>
       </main>
 
-      
-      
-
       {/* Modal for login */}
-      {isModalOpen && (
+      {isLoginModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -118,7 +105,45 @@ export default function LandingPage() {
                 Sign In
               </Button>
             </form>
-            <button className="mt-4 text-sm text-gray-400 hover:text-blue-400" onClick={closeModal}>
+            <button className="mt-4 text-sm text-gray-400 hover:text-blue-400" onClick={closeLoginModal}>
+              Close
+            </button>
+          </motion.div>
+        </div>
+      )}
+{/* 
+       */}
+
+      {/* Modal for register */}
+      {isRegisterModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg text-gray-100 max-w-md w-full"
+          >
+            <h2 className="text-xl font-bold mb-4">Register</h2>
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Username"
+                className="w-full p-2 rounded bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-2 rounded bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full p-2 rounded bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                Register
+              </Button>
+            </form>
+            <button className="mt-4 text-sm text-gray-400 hover:text-blue-400" onClick={closeRegisterModal}>
               Close
             </button>
           </motion.div>
