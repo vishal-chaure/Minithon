@@ -63,7 +63,7 @@ const ExpenseTracker = () => {
   };
 
   return (
-    <Card className="w-full h-full max-w-full h-[90vh] p-20">
+    <Card className="w-full h-full max-w-full h-[90vh] p-5">
       <h1 className="text-center font-bold text-xl">Dynamic Expense Tracker</h1>
       <h2 className="text-center font-bold text-lg mb-4">Analyze your spending patterns with interactive charts</h2>
       <div className="flex justify-between mb-4">

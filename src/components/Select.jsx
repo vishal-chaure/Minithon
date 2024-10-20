@@ -3,7 +3,7 @@ import React from 'react';
 export const Select = ({ value, onValueChange, children }) => {
   return (
     <div className="select">
-      <select value={value} onChange={(e) => onValueChange(e.target.value)}>
+      <select value={value} onChange={(e) => onValueChange(e.target.value)} className="custom-select">
         {children}
       </select>
     </div>

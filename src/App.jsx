@@ -5,6 +5,8 @@ import AboutUs from './pages/AboutUs';
 import { DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
 import ExpenseTracker from './components/ExpenseTracker';
+import './styles/style.css'; // Import the CSS file
+
 
 const App = () => {
   const landingRef = useRef(null);
