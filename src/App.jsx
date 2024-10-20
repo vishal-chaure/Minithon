@@ -4,10 +4,12 @@ import FeaturesPage from './pages/FeaturesPage';
 import AboutUs from './pages/AboutUs';
 import { DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
+import ExpenseTracker from './components/ExpenseTracker';
 
 const App = () => {
   const landingRef = useRef(null);
   const featuresRef = useRef(null);
+  const ExpenseTrackerRef = useRef(null);
   const aboutRef = useRef(null);
 
   const scrollToSection = (ref) => {
@@ -34,6 +36,9 @@ const App = () => {
           <button className="text-sm font-medium hover:text-blue-400 transition-colors" onClick={() => scrollToSection(featuresRef)}>
             Features
           </button>
+          <button className="text-sm font-medium hover:text-blue-400 transition-colors" onClick={() => scrollToSection(ExpenseTrackerRef)}>
+            ExpenseTracker
+          </button>
           <button className="text-sm font-medium hover:text-blue-400 transition-colors" onClick={() => scrollToSection(aboutRef)}>
             About Us
           </button>
@@ -48,6 +53,11 @@ const App = () => {
       {/* Features Section */}
       <div ref={featuresRef}>
         <FeaturesPage />
+      </div>
+
+      {/* ExpenseTracker Section */}
+      <div ref={ExpenseTrackerRef}>
+        <ExpenseTracker />
       </div>
 
       {/* About Us Section */}
