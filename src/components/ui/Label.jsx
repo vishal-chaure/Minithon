@@ -1,11 +1,10 @@
-import React from 'react'
+// src/components/ui/Label.jsx
+import React from 'react';
 
-function Label() {
+export function Label({ htmlFor, children }) {
   return (
-    <div>
-      label
-    </div>
-  )
+    <label htmlFor={htmlFor} className="block text-sm font-medium text-gray-700">
+      {children}
+    </label>
+  );
 }
-
-export default Label
