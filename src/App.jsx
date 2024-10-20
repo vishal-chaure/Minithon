@@ -1,8 +1,10 @@
 import React from 'react'
-
+import OnboardingPage from '../Pooja/OnboardingPage'
 const App = () => {
   return (
-    <div>App hello whats app vishal</div>
+    <div>
+      <OnboardingPage/>
+    </div>
   )
 }
 
