@@ -50,8 +50,8 @@ export default function LandingPage() {
               </div>
               <div className="space-x-4">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Sign In
-                  <ChevronRight className="ml-2 h-4 w-4" />
+                  Login
+                  {/* <ChevronRight className="ml-2 h-4 w-4" /> */}
                 </Button>
                 <Button size="lg" variant="outline" className="border-blue-600 text-blue-400 hover:bg-blue-950">
                   Register
