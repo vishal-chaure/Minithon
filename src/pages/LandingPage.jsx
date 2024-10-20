@@ -10,9 +10,9 @@ export default function LandingPage() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 pt-20">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
+      {/* <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
         <a href="#" className="flex items-center justify-center">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <DollarSign className="h-8 w-8 text-blue-400" />
@@ -30,7 +30,7 @@ export default function LandingPage() {
             Contact
           </a>
         </nav>
-      </header>
+      </header> */}
 
       {/* Main content */}
       <main className="flex-1">

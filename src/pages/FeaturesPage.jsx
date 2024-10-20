@@ -40,7 +40,7 @@ const expenseData = [
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-gray-900 text-gray-100 pt-20">
       <header className="bg-gray-800 py-6">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-blue-300">BudgetBuddy Features</h1>
