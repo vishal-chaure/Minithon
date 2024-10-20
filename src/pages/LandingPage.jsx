@@ -14,7 +14,7 @@ export default function LandingPage() {
           >
             <DollarSign className="h-8 w-8 text-blue-400" />
           </motion.div>
-          <span className="ml-2 text-xl font-bold text-blue-300">FinDash</span>
+          <span className="ml-2 text-xl font-bold text-blue-300">BudgetBuddy</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
