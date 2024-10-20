@@ -119,6 +119,24 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
+      <footer className="w-full py-6 my-6 bg-gray-800 text-gray-400">
+        <div className="container px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm">
+            © 2024 BudgetBuddy Inc. All rights reserved.
+          </p>
+          <nav className="flex gap-4 mt-4 md:mt-0">
+            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
+              Terms of Service
+            </a>
+            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
+              Privacy Policy
+            </a>
+            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
+              FAQ
+            </a>
+          </nav>
+        </div>
+      </footer>
     </div>
   )
 }

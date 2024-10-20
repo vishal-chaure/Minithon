@@ -142,11 +142,7 @@ export default function FeaturesPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-800 py-6 mt-12">
-        <div className="container mx-auto px-4 text-center text-gray-400">
-          <p>&copy; 2024 BudgetBuddy. All rights reserved.</p>
-        </div>
-      </footer>
+      
     </div>
   );
 }
