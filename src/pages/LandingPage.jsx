@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, DollarSign, PieChart, Bell, Target, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function LandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
-      <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 pt-20">
+      {/* Header */}
+      {/* <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
         <a href="#" className="flex items-center justify-center">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <DollarSign className="h-8 w-8 text-blue-400" />
           </motion.div>
           <span className="ml-2 text-xl font-bold text-blue-300">BudgetBuddy</span>
@@ -21,16 +24,15 @@ export default function LandingPage() {
             Features
           </a>
           <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            Pricing
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
             About
           </a>
           <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
             Contact
           </a>
         </nav>
-      </header>
+      </header> */}
+
+      {/* Main content */}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
           <div className="container px-4 md:px-6 relative z-10">
@@ -49,9 +51,8 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={openModal}>
                   Login
-                  {/* <ChevronRight className="ml-2 h-4 w-4" /> */}
                 </Button>
                 <Button size="lg" variant="outline" className="border-blue-600 text-blue-400 hover:bg-blue-950">
                   Register
@@ -61,6 +62,7 @@ export default function LandingPage() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-800 opacity-20 z-0"></div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-300">
@@ -88,24 +90,41 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-gray-800 text-gray-400">
-        <div className="container px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">
-            ©️ 2024 FinDash Inc. All rights reserved.
-          </p>
-          <nav className="flex gap-4 mt-4 md:mt-0">
-            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
-              Terms of Service
-            </a>
-            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
-              Privacy Policy
-            </a>
-            <a className="text-sm hover:text-blue-400 transition-colors" href="#">
-              FAQ
-            </a>
-          </nav>
+
+      
+      
+
+      {/* Modal for login */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg text-gray-100 max-w-md w-full"
+          >
+            <h2 className="text-xl font-bold mb-4">Sign In</h2>
+            <form className="space-y-4">
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-2 rounded bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full p-2 rounded bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                Sign In
+              </Button>
+            </form>
+            <button className="mt-4 text-sm text-gray-400 hover:text-blue-400" onClick={closeModal}>
+              Close
+            </button>
+          </motion.div>
         </div>
-      </footer>
+      )}
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
