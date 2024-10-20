@@ -1,13 +1,16 @@
 import React from "react"
 import { TwitterIcon, GithubIcon, LinkedinIcon } from "lucide-react"
-
+import LaxmiPic from "../assets/LaxmiPic.jpeg";
+import PoojaPic from "../assets/poojaNayi.png";
+import VishalPic from "../assets/VishalPic.jpeg";
+import VedantPic from "../assets/VedantPic.jpeg";
 export default function AboutUs() {
   const team = [
     {
-      name: "Alex Johnson",
-      role: "CEO & Founder",
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Visionary leader with 10+ years in tech innovation.",
+      name: "Laxmi Bodke",
+      role: "Frontend Developer",
+      image: LaxmiPic,
+      description: "Specialized in creating engaging and interactive user interfaces for web applications.",
       social: {
         twitter: "#",
         github: "#",
@@ -15,10 +18,10 @@ export default function AboutUs() {
       }
     },
     {
-      name: "Sam Lee",
-      role: "CTO",
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Expert in AI and machine learning technologies.",
+      name: "Pooja Maurya",
+      role: "Frontend Developer",
+      image: PoojaPic,
+      description: "Specialized in creating engaging and interactive user interfaces for web applications.",
       social: {
         twitter: "#",
         github: "#",
@@ -26,10 +29,10 @@ export default function AboutUs() {
       }
     },
     {
-      name: "Emily Chen",
-      role: "Head of Design",
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Award-winning UX/UI designer with a passion for accessibility.",
+      name: "Vedant Kamble",
+      role: "Frontend Developer",
+      image: VedantPic,
+      description: "Specialized in creating engaging and interactive user interfaces for web applications.",
       social: {
         twitter: "#",
         github: "#",
@@ -37,10 +40,10 @@ export default function AboutUs() {
       }
     },
     {
-      name: "Michael Brown",
-      role: "Lead Developer",
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Full-stack developer specializing in scalable architectures.",
+      name: "Vishal Chaure",
+      role: "Frontend Developer",
+      image: VishalPic,
+      description: "Specialized in creating engaging and interactive user interfaces for web applications.",
       social: {
         twitter: "#",
         github: "#",
